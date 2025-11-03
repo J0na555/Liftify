@@ -1,0 +1,43 @@
+# Byte-code files
+*.pyc
+__pycache__/
+/Liftify/backend/liftify_backend/__pycache__
+/Liftify/backend/apps/workouts/__pycache__
+# Virtual environment
+.venv/
+env/
+venv/
+
+# Database
+*.sqlite3
+db.sqlite3
+# Static files and media files (if served locally)
+/static/
+/media/
+
+# IDE specific files
+.idea/
+.vscode/
+
+# Environment variables (if used)
+.env
+
+# Local settings (if separate from main settings)
+local_settings.py
+
+# Other potential temporary or generated files
+*.log
+*.pot
+*.mo
+
+backend/apps/workouts/__pycache__
+backend/apps/workouts/migrations
+
+backend/apps/users/__pycache__
+backend/apps/users/migrations
+
+backend/apps/progress/__pycache__
+backend/apps/progress/migrations
+
+backend/apps/liftify_backend/__pycache__
+backend/apps/liftify_backend/migrations
