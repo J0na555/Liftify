@@ -1,8 +1,9 @@
-import uuid
 from django.db import models
+from django.contrib.auth.models import AbstractBaseUser
+import uuid
 
 
-class User(models.Model):
+class User(AbstractBaseUser):
     GENDER_CHOICES = [
         ('male', 'Male'),
         ('female', 'Female')
@@ -12,7 +13,7 @@ class User(models.Model):
         ('build muscle', 'Build Muscle')
     ]
 
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=True)
+    id = models.UUIDField(primary_key=True,default=uuid.uuid4, editable=False)
     username = models.CharField(max_length=50, unique=True)
     email = models.EmailField(unique=True)
     password = models.CharField(max_length=225)
@@ -26,6 +27,10 @@ class User(models.Model):
     last_login = models.DateTimeField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    USERNAME_FIELD = 'username'
+    REQUIRED_FIELDS = ['email']
+
 
     def __str__(self):
         return self.full_name if self.full_name else self.username
