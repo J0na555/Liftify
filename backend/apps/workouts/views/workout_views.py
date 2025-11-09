@@ -4,7 +4,7 @@ from rest_framework.permissions import IsAuthenticated
 from ..models import Workout
 
 
-class CreateWorkout(generics.ListCreateAPIView):
+class CreateListWorkout(generics.ListCreateAPIView):
     serializer_class = WorkoutSerializer
     permission_classes = [IsAuthenticated]
 
