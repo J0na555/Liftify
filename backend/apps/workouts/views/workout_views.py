@@ -28,5 +28,11 @@ class UpdateWorkout(generics.RetrieveUpdateAPIView):
     permission_classes = [IsAuthenticated]
     lookup_field = 'pk'
 
+class DeleteWorkout(generics.DestroyAPIView):
+    queryset = Workout.objects.all()
+    serializer_class = WorkoutSerializer
+    permission_classes = [IsAuthenticated]
+    lookup_field = 'pk'
+
 
 
