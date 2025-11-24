@@ -1,5 +1,5 @@
 from django.urls import path
-from ..views.workout_views import CreateWorkout,ListWorkout , UpdateWorkout, DeleteWorkout
+from ..views.workout_views import CreateWorkout, ListWorkout, UpdateWorkout, DeleteWorkout
 
 app_name = "workouts"
 

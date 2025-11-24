@@ -46,12 +46,9 @@ backend/apps/progress/migrations
 
 backend/apps/liftify_backend/__pycache__
 backend/apps/liftify_backend/migrations
-
-<<<<<<< HEAD
+# Ignore DB files
+*.sqlite3
+*.sqlite
+*.db
 db.sqlite3
 backend/db.sqlite3
-/home/jonas/Documents/projects/Liftify/backend/db.sqlite3
-=======
-.db.sqlite3
-backend/.db.sqlite3
->>>>>>> b132e44 (WIP: exercise + workout base changes)
